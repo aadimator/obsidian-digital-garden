@@ -1,0 +1,66 @@
+.markdown-embed {
+    border: 1px solid var(--separator);
+    background-color: var(--references-bg);
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.markdown-embed-content {
+    /* overflow: scroll;
+    overflow-wrap: break-word;
+    max-height: 800px; */
+    padding: 20px 20px 20px 20px;
+}
+
+.markdown-embed-link {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.markdown-embed-link > p > a {
+    font-size:0;
+    text-decoration: none;
+    color: var(--references-text);
+}
+
+.markdown-embed-link > p > a::after {
+    margin-top: 0.5em;
+    font-size: 16px;
+    content: "🔗";
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--references-bg) var(--note-bg);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--note-bg);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #3f4b64;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    /* background-color: #8070d4; */
+    background-clip: content-box;
+  }
+
+  /* External Links Icon */
+  a:not([href*='notes.aadimator.com']):not([href^='#']):not([href^='/']):after {
+      content: var(--link-url);
+      /* content: "⇗↪↗️"; */
+      margin: 0 0 0 5px;
+      color: var(--link);
+  }
